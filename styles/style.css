@@ -48,30 +48,6 @@ video {
   height: 100%;
 }
 
-.button {
-  background: transparent;
-  color: #fff;
-  border: 1px solid #fff;
-  text-align: center;
-  font-family: Fira Sans Condensed;
-  font-size: 18px;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-.button:active {
-  background-color: #545050;
-}
-
-.button:hover {
-  text-decoration: underline;
-}
-
-.button:focus-visible {
-  outline: 1px solid #fff;
-  outline-offset: 1px;
-}
-
 .visually-hidden {
   position: absolute;
   inline-size: 1px;
@@ -169,6 +145,30 @@ video {
   height: 19px;
   border: 1px solid #fff;
   cursor: pointer;
+}
+
+.button {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  text-align: center;
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.button:active {
+  background-color: #545050;
+}
+
+.button:hover {
+  text-decoration: underline;
+}
+
+.button:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
 }
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
