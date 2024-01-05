@@ -82,6 +82,13 @@ video {
   white-space: nowrap;
 }
 
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 30px;
+}
+
 .result__video-container {
   position: relative;
   height: 386px;
@@ -94,13 +101,6 @@ video {
   object-fit: cover;
   object-position: center;
   margin-bottom: 16px;
-}
-
-.content {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  gap: 30px;
 }
 
 .search-form {
@@ -187,7 +187,6 @@ video {
 
 .content__details {
   width: 399px;
-
 }
 
 .title {
@@ -204,6 +203,7 @@ video {
 }
 
 .content__list {
+  position: relative;
   max-height: 298px;
   overflow: auto;
 }
