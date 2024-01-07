@@ -63,6 +63,7 @@ video {
   justify-content: center;
   align-items: flex-end;
   gap: 30px;
+  margin-left: 30px;
 }
 
 .result__video-container {
@@ -82,7 +83,7 @@ video {
 .search-form {
   display: flex;
   justify-content: space-between;
-  align-items: end;
+  align-items: center;
 }
 
 .search-form__checkbox-list {
@@ -109,8 +110,8 @@ video {
   text-underline-offset: 5px;
 }
 
-.search-form__label:focus-visible {
-  outline: 1px solid #fff;
+.search-form__label:has(:focus-visible) {
+  outline: 1px solid #FFF;
   outline-offset: 1px;
 }
 
@@ -120,19 +121,23 @@ video {
   border-top: 1px solid #FFF;
   border-bottom: 1px solid #FFF;
   width: 225px;
-  font-family: Fira Sans Condensed;
-  color: rgba(255, 255, 255, 0.70);
+  font-family: 'Fira Sans Condensed', sans-serif;
+  color: #fff;
   font-size: 18px;
   font-weight: 400;
   margin-top: 5px;
   appearance: none;
 }
 
+.search-form__textfield::placeholder {
+  color: rgba(255, 255, 255, 0.70);
+}
+
 .search-form__textfield:active {
   outline: 1px solid #fff;
 }
 
-.search-form__textfield:hover {
+.search-form__textfield:focus {
   outline: none;
 }
 
@@ -147,12 +152,21 @@ video {
   cursor: pointer;
 }
 
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
+  content: '';
+  display: block;
+  background-color: #fff;
+  height: 15px;
+  width: 15px;
+  margin: 1px 0 0 1px;
+}
+
 .button {
   background: transparent;
   color: #fff;
   border: 1px solid #fff;
   text-align: center;
-  font-family: Fira Sans Condensed;
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   font-weight: 700;
   cursor: pointer;
@@ -171,18 +185,10 @@ video {
   outline-offset: 1px;
 }
 
-.search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
-  content: '';
-  display: block;
-  background-color: #fff;
-  height: 15px;
-  width: 15px;
-  margin: 1px 0 0 1px;
-}
-
 .search-form__submit-button {
   height: 34px;
   width: 194px;
+  margin-top: 36px;
 }
 
 .content__details {
@@ -190,7 +196,7 @@ video {
 }
 
 .title {
-  font-family: Oswald;
+  font-family: Oswald, sans-serif;
   font-size: 75px;
   font-weight: 700;
   line-height: 94%; /* 70.5px */
@@ -204,7 +210,8 @@ video {
 
 .content__list {
   position: relative;
-  max-height: 298px;
+  height: 298px;
+  width: 399px;
   overflow: auto;
 }
 
@@ -250,7 +257,7 @@ video {
 }
 
 .content__video-card-title {
-  font-family: Oswald;
+  font-family: Oswald, sans-serif;
   font-size: 30px;
   font-weight: 700;
   line-height: 100%; /* 30px */
